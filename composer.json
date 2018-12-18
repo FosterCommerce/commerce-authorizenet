@@ -1,0 +1,36 @@
+{
+  "name": "fostercommerce/commerce-authorizenet",
+  "homepage": "https://github.com/fostercommerce/commerce-authorizenet",
+  "type": "craft-plugin",
+  "license": "proprietary",
+  "keywords": [
+    "craftcms",
+    "commerce",
+    "omnipay",
+    "authorize.net"
+  ],
+  "authors": [{
+    "name": "Foster Commerce",
+    "homepage": "https://www.fostercommerce.com"
+  }],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "fostercommerce\\commerceauthorizenet\\": "src/"
+    }
+  },
+  "require": {
+    "craftcms/cms": "^3.0.0",
+    "omnipay/authorizenet": "2.6"
+  },
+  "require-dev": {
+    "craftcms/commerce": "^2.0.0-beta.13",
+    "craftcms/commerce-omnipay": "^1.0"
+  },
+  "extra": {
+    "handle": "commerce-authorizenet",
+    "name": "Authorize.net for Craft Commerce",
+    "developer": "Foster Commerce"
+  }
+}

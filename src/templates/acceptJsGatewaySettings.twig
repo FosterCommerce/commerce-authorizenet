@@ -1,0 +1,44 @@
+{% from "_includes/forms" import textField, lightswitchField %}
+
+{{ textField({
+    label: 'API Login ID'|t('commerce-authorizenet'),
+    id: 'apiLoginId',
+    class: 'ltr',
+    name: 'apiLoginId',
+    value: gateway.apiLoginId,
+    errors: gateway.getErrors('apiLoginId')
+}) }}
+
+{{ textField({
+    label: 'Transaction Key'|t('commerce-authorizenet'),
+    id: 'transactionKey',
+    class: 'ltr',
+    name: 'transactionKey',
+    value: gateway.transactionKey,
+    errors: gateway.getErrors('transactionKey')
+}) }}
+
+{{ textField({
+    label: 'Hash Secret'|t('commerce-authorizenet'),
+    id: 'hashSecret',
+    class: 'ltr',
+    name: 'hashSecret',
+    value: gateway.hashSecret,
+    errors: gateway.getErrors('hashSecret')
+}) }}
+
+{{ textField({
+    label: 'Client Key'|t('commerce-authorizenet'),
+    id: 'clientKey',
+    class: 'ltr',
+    name: 'clientKey',
+    value: gateway.clientKey,
+    errors: gateway.getErrors('clientKey')
+}) }}
+
+{{ lightswitchField({
+    label: "Developer Mode"|t('commerce-authorizenet'),
+    id: 'developerMode',
+    name: 'developerMode',
+    on: gateway.developerMode
+}) }}
